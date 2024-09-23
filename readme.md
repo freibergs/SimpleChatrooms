@@ -25,7 +25,7 @@ This is a work-in-progress real-time chat application built with FastAPI, WebSoc
 1. Clone the repository (placeholder instructions)
 2. Install dependencies:
    ```
-   pip install fastapi uvicorn sqlalchemy passlib jinja2
+   pip install -r requirements.txt
    ```
 3. Run the application:
    ```
