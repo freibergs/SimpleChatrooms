@@ -58,4 +58,4 @@ This project is a work in progress. Contributions, ideas, and feedback are welco
 
 ## License
 
-[MIT License](https://opensource.org/licenses/MIT)
+[MIT Licence](LICENSE.md) (currently)
