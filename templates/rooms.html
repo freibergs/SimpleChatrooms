@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Istabas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-dark text-white">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Laipni lūdzam, {{ username }}</h1>
+        <h3>Aktīvās istabas:</h3>
+        <ul class="list-group mb-4">
+            {% for room in active_rooms %}
+            <li class="list-group-item bg-secondary text-white">
+                <form action="/chat" method="post" class="d-inline">
+                    <input type="hidden" name="room" value="{{ room }}">
+                    <button type="submit" class="btn btn-link text-white">{{ room }}</button>
+                </form>
+            </li>
+            {% else %}
+            <li class="list-group-item bg-secondary text-white">Nav aktīvu istabu.</li>
+            {% endfor %}
+        </ul>
+        <h3>Izveidot istabu vai pievienoties pēc nosaukuma:</h3>
+        <form action="/chat" method="post" class="mb-4">
+            <div class="mb-3">
+                <input name="room" type="text" class="form-control" placeholder="Istabas nosaukums" required autofocus>
+            </div>
+            <button class="btn btn-primary">Ienākt istabā</button>
+        </form>
+        <a href="/logout" class="btn btn-danger">Izrakstīties</a>
+    </div>
+</body>
+</html>

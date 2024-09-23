@@ -1,0 +1,26 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#chat {
+    background-color: #2c2f33;
+}
+
+#chat div {
+    margin-bottom: 10px;
+}
+
+#typing {
+    font-style: italic;
+}
+
+#chat div {
+    margin-bottom: 10px;
+}
+
+.system-message {
+    font-style: italic;
+    color: #17a2b8;
+}
+
+.text-muted {color:white!important}
